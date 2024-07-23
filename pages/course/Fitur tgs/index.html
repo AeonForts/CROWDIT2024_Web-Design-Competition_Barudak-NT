@@ -79,7 +79,7 @@
     <div class="container d-flex justify-content-between">
   
       <a href="/pages/dashboard.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <img src="/assets/images/logo1.png" alt="mdo" width="60" height="60" class="rounded-circle">
+        <img src="../../../assets/images/logo1.png" alt="mdo" width="60" height="60" class="rounded-circle">
         <span class="ms-3 text-center">NT University</span>
       </a>
       <div class="ms-5 ps-3"></div>
@@ -121,9 +121,9 @@
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="#">Home</a></li>
-        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="#">Course</a></li>
-        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="#">Statistics and Probability</a></li>
+        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="../../dashboard.html">Home</a></li>
+        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="../Course.html">Course</a></li>
+        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="../NameMatkul/index.html">Statistics and Probability</a></li>
         <li class="breadcrumb-item active" aria-current="page">Tugas1</li>
       </ol>
     </nav>
@@ -230,7 +230,7 @@
   
     <!-- Center the button -->
     <div class="text-center my-4">
-      <a href="./NameMatkul/index.html" class="btn btn-primary" style="width: 50%;">Submit</a>
+      <a href="../NameMatkul/index.html" class="btn btn-primary" style="width: 50%;">Submit</a>
     </div>
 
     <br>
@@ -265,7 +265,15 @@
       var fileName = this.files.length > 0 ? this.files[0].name : "No file chosen";
       document.getElementById("file-name").textContent = "Selected file: " + fileName;
     });
+
+    document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action (navigation)
+    document.getElementById('successAlert').style.display = 'block'; // Show the success alert
+    setTimeout(function() {
+      window.location.href = '../NameMatkul/index.html'; // Redirect after a short delay
+    }, 2000); // Adjust the delay as needed (2000ms = 2 seconds)
+  });
   </script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

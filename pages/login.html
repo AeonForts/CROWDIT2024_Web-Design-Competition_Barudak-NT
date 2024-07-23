@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/assets/images/hero.jpg') no-repeat;
+    background: url('../assets/images/hero.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -145,7 +145,7 @@ text-align: center;
 <body>
     <div class="wrapper">
         <div>
-            <a href="/index.html" style="text-decoration: none; color: white;"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" style="text-decoration: none; color: white;"><i class="fa-solid fa-arrow-left"></i></a>
             
         </div>
         <form id="loginForm" onsubmit="return login()">
@@ -174,17 +174,16 @@ text-align: center;
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-
             console.log('Username:', username);
             console.log('Password:', password);
 
-
+            // Store username in localStorage
             localStorage.setItem('username', username);
+            console.log('Username stored:', localStorage.getItem('username')); // Verify 
 
-            
-            window.location.href = 'dashboard.html';
+            // Redirect to dashboard.html
+            window.location.href = '../pages/dashboard.html';
 
-            
             return false;
         }
     </script>

@@ -56,11 +56,19 @@
   </style>
 </head>
 <body>
+
+  <div id="loading" class="d-flex justify-content-center align-items-center vh-100 position-fixed bg-light">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  
   <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top shadow-sm">
     <div class="container d-flex justify-content-between">
   
       <a href="../dashboard.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <img src="/assets/images/logo1.png" alt="mdo" width="60" height="60" class="rounded-circle">
+        <img src="../../assets/images/logo1.png" alt="mdo" width="60" height="60" class="rounded-circle">
         <span class="ms-3 text-center">NT University</span>
       </a>
       <div class="ms-5 ps-3"></div>
@@ -102,7 +110,7 @@
     
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="#">Home</a></li>
+        <li class="breadcrumb-item"><a style="text-decoration-line: none;" href="../dashboard.html">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Course</li>
       </ol>
     </nav>
@@ -236,6 +244,7 @@
   <script>
     feather.replace();
   </script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/loading.js"></script>
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
