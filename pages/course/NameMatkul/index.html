@@ -112,7 +112,9 @@
         <li class="breadcrumb-item active" aria-current="page">Statistics and Probability</li>
       </ol>
     </nav>
-
+    <div id="successAlert" class="alert alert-success" role="alert" style="display: none;">
+      A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
     <br>
     <h3>Course</h3>
 
@@ -221,6 +223,17 @@
 
   <script>
     feather.replace();
+
+  // Check for success message in local storage
+  const successMessage = localStorage.getItem('successMessage');
+
+  if (successMessage) {
+    const successAlert = document.getElementById('successAlert');
+    successAlert.textContent = successMessage;
+    successAlert.style.display = 'block';
+    localStorage.removeItem('successMessage'); // Clear the flag
+  }
+
   </script>
   <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
